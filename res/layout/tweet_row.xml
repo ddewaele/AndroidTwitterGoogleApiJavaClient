@@ -9,9 +9,7 @@
 	        android:id="@+id/user_text"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
-	        android:layout_marginTop="0dp"
-	        android:textColor="#FFFFFF"
-	        android:text="user_text" />
+	        android:layout_marginTop="0dp"/>
 
 	    
 </RelativeLayout>

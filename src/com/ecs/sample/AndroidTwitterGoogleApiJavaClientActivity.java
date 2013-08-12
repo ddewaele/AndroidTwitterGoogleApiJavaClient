@@ -80,10 +80,10 @@ public class AndroidTwitterGoogleApiJavaClientActivity extends Activity {
 				for (twitter4j.Status status : homeTimeline) {
 					statusList.add(status);
 				}
-				adapter = new HomeTimelineAdapter(AndroidTwitterGoogleApiJavaClientActivity.this,R.layout.page_timeline_row,statusList);
+				adapter = new HomeTimelineAdapter(AndroidTwitterGoogleApiJavaClientActivity.this,R.layout.tweet_row,statusList);
 				
 			} catch (Exception ex) {
-				adapter = new HomeTimelineAdapter(AndroidTwitterGoogleApiJavaClientActivity.this,R.layout.page_timeline_row,new ArrayList<twitter4j.Status>());
+				adapter = new HomeTimelineAdapter(AndroidTwitterGoogleApiJavaClientActivity.this,R.layout.tweet_row,new ArrayList<twitter4j.Status>());
 				ex.printStackTrace();
 			}
 			
