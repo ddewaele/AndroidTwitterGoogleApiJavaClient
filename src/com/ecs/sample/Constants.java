@@ -2,6 +2,8 @@ package com.ecs.sample;
 
 public class Constants {
 
+	public static final String TAG = "AndroidTwitterOauth1";
+	
 	public static final String CONSUMER_KEY = "PUT YOUR TWITTER OAUTH CONSUMER KEY HERE";
 	public static final String CONSUMER_SECRET= "PUT YOUR TWITTER OAUTH CONSUMER SECRET HERE";
 	

@@ -4,8 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-    
-    	    <Button android:id="@+id/btn_launch_oauth"
+	    <Button android:id="@+id/btn_launch_oauth"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:text="Launch OAuth Flow"/>
@@ -13,11 +12,12 @@
 	    <Button android:id="@+id/btn_clear_credentials"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:text="Clear Credentials"/>
-	    
-<ListView
-    android:id="@+id/listview"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" /> 
-    
+	            android:text="Clear Credentials"/>	 
+	            
+            <TextView android:id="@+id/response_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+			    android:textColor="#FFFFFF"
+			    android:typeface="normal"/>  
 </LinearLayout>

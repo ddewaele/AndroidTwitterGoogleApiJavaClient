@@ -1,12 +1,14 @@
 package com.ecs.sample;
 
-import com.ecs.sample.store.SharedPreferencesCredentialStore;
-
+import twitter4j.ResponseList;
+import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
-import twitter4j.http.AccessToken;
+import twitter4j.auth.AccessToken;
 import android.content.SharedPreferences;
+
+import com.ecs.sample.store.SharedPreferencesCredentialStore;
 
 public class TwitterUtils {
 
@@ -24,6 +26,16 @@ public class TwitterUtils {
 		} catch (TwitterException e) {
 			return false;
 		}
+	}
+	
+	public static ResponseList<Status> getHomeTimeline(SharedPreferences prefs) throws Exception {
+		String[] tokens = new SharedPreferencesCredentialStore(prefs).read();
+		AccessToken a = new AccessToken(tokens[0],tokens[1]);
+		Twitter twitter = new TwitterFactory().getInstance();
+		twitter.setOAuthConsumer(Constants.CONSUMER_KEY, Constants.CONSUMER_SECRET);
+		twitter.setOAuthAccessToken(a);
+        ResponseList<Status> homeTimeline = twitter.getHomeTimeline();
+        return homeTimeline;
 	}
 	
 	public static void sendTweet(SharedPreferences prefs,String msg) throws Exception {

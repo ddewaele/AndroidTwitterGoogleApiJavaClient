@@ -14,7 +14,6 @@ public class SharedPreferencesCredentialStore implements CredentialStore {
 		this.prefs = prefs;
 	}
 	
-	@Override
 	public String[] read() {
 		String[] tokens = new String[2];
 		tokens[0]=prefs.getString(TOKEN, "");
@@ -22,7 +21,6 @@ public class SharedPreferencesCredentialStore implements CredentialStore {
 		return tokens;
 	}
 
-	@Override
 	public void write(String[] tokens) {
 		Editor editor = prefs.edit();
 		editor.putString(TOKEN,tokens[0]);
@@ -30,7 +28,6 @@ public class SharedPreferencesCredentialStore implements CredentialStore {
 		editor.commit();
 	}
 	
-	@Override
 	public void clearCredentials() {
 		Editor editor = prefs.edit();
 		editor.remove(TOKEN);
