@@ -17,7 +17,7 @@ public class TwitterUtils {
 		String[] tokens = new SharedPreferencesCredentialStore(prefs).read();
 		AccessToken a = new AccessToken(tokens[0],tokens[1]);
 		Twitter twitter = new TwitterFactory().getInstance();
-		twitter.setOAuthConsumer(Constants.CONSUMER_KEY, Constants.CONSUMER_SECRET);
+		twitter.setOAuthConsumer(Constants.API_KEY, Constants.API_SECRET);
 		twitter.setOAuthAccessToken(a);
 		
 		try {
@@ -32,7 +32,7 @@ public class TwitterUtils {
 		String[] tokens = new SharedPreferencesCredentialStore(prefs).read();
 		AccessToken a = new AccessToken(tokens[0],tokens[1]);
 		Twitter twitter = new TwitterFactory().getInstance();
-		twitter.setOAuthConsumer(Constants.CONSUMER_KEY, Constants.CONSUMER_SECRET);
+		twitter.setOAuthConsumer(Constants.API_KEY, Constants.API_SECRET);
 		twitter.setOAuthAccessToken(a);
         ResponseList<Status> homeTimeline = twitter.getHomeTimeline();
         return homeTimeline;
@@ -42,7 +42,7 @@ public class TwitterUtils {
 		String[] tokens = new SharedPreferencesCredentialStore(prefs).read();
 		AccessToken a = new AccessToken(tokens[0],tokens[1]);
 		Twitter twitter = new TwitterFactory().getInstance();
-		twitter.setOAuthConsumer(Constants.CONSUMER_KEY, Constants.CONSUMER_SECRET);
+		twitter.setOAuthConsumer(Constants.API_KEY, Constants.API_SECRET);
 		twitter.setOAuthAccessToken(a);
         twitter.updateStatus(msg);
 	}	

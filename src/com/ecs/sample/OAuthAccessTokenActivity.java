@@ -68,12 +68,12 @@ public class OAuthAccessTokenActivity extends Activity {
 
 			try {
 			  
-		        signer.clientSharedSecret = Constants.CONSUMER_SECRET;
+		        signer.clientSharedSecret = Constants.API_SECRET;
 		        
 				OAuthGetTemporaryToken temporaryToken = new OAuthGetTemporaryToken(Constants.REQUEST_URL);
 				temporaryToken.transport = new ApacheHttpTransport();
 				temporaryToken.signer = signer;
-				temporaryToken.consumerKey = Constants.CONSUMER_KEY;
+				temporaryToken.consumerKey = Constants.API_KEY;
 				temporaryToken.callback = Constants.OAUTH_CALLBACK_URL;
 				
 				OAuthCredentialsResponse tempCredentials = temporaryToken.execute();
@@ -156,13 +156,13 @@ public class OAuthAccessTokenActivity extends Activity {
             			String requestToken  = extractParamFromUrl(url,"oauth_token");
             			String verifier= extractParamFromUrl(url,"oauth_verifier");
 						
-            			signer.clientSharedSecret = Constants.CONSUMER_SECRET;
+            			signer.clientSharedSecret = Constants.API_SECRET;
 
             			OAuthGetAccessToken accessToken = new OAuthGetAccessToken(Constants.ACCESS_URL);
             			accessToken.transport = new ApacheHttpTransport();
             			accessToken.temporaryToken = requestToken;
             			accessToken.signer = signer;
-            			accessToken.consumerKey = Constants.CONSUMER_KEY;
+            			accessToken.consumerKey = Constants.API_KEY;
             			accessToken.verifier = verifier;
 
             			OAuthCredentialsResponse credentials = accessToken.execute();
