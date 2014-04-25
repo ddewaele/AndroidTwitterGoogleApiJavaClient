@@ -43,6 +43,34 @@ Make sure you have your ANDROID_HOME variable pointing to your SDK
 
 ![](https://dl.dropboxusercontent.com/u/13246619/Blog%20Articles/AndroidMavenSetup/4_env_variable.PNG)
 
+### Clone and import the project
+
+Clone the project on your filesystem
+
+	git clone git@github.com:ddewaele/AndroidTwitterGoogleApiJavaClient.git
+	Cloning into AndroidTwitterGoogleApiJavaClient...
+	remote: Reusing existing pack: 145, done.
+	remote: Counting objects: 11, done.
+	remote: Compressing objects: 100% (8/8), done.
+	remote: Total 156 (delta 0), reused 0 (delta 0)
+	Receiving objects: 100% (156/156), 529.74 KiB | 483 KiB/s, done.
+	Resolving deltas: 100% (33/33), done.
+
+Import the project in Eclipse ADT.
+
+When importing the project, select ```Existing Maven Projects```.
+
+![](https://dl.dropboxusercontent.com/u/13246619/Blog%20Articles/OAuth1Twitter/adt-import.png)
+
+Navigate to the place where you cloned the repository (ex: /Users/ddewaele/Projects/AndroidTwitterGoogleApiJavaClient) and click Finish.
+
+![](https://dl.dropboxusercontent.com/u/13246619/Blog%20Articles/OAuth1Twitter/adt-import2.png)
+
+After that, Eclipse ADT and the Maven M2E plugin should import your project and setup all the dependencies.
+
+![](https://dl.dropboxusercontent.com/u/13246619/Blog%20Articles/OAuth1Twitter/adt-import3.png)
+
+
 ### Twitter OAuth application and keys
 
 As this application allows you to interact with Twitter, you need to go to to the [Twitter Developer page](dev.twitter.com) to [register a new application](https://apps.twitter.com/app/new).
