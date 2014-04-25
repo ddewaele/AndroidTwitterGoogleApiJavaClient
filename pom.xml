@@ -12,8 +12,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<platform.version> 4.1.1.4</platform.version>
 		<android.plugin.version>3.6.0</android.plugin.version>
-		<project.http.version>1.15.0-rc</project.http.version>
-    	<project.oauth.version>1.15.0-rc</project.oauth.version>
+		<com.google.api-client.version>1.18.0-rc</com.google.api-client.version>
     	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -30,16 +29,17 @@
 		      	</exclusion>
 			</exclusions>
 		</dependency>
-		    <dependency>
-      <groupId>com.google.apis</groupId>
-      <artifactId>google-api-services-plus</artifactId>
-      <version>v1-rev72-1.15.0-rc</version>
+	
+	<dependency>
+      <groupId>com.google.api-client</groupId>
+      <artifactId>google-api-client</artifactId>
+      <version>${com.google.api-client.version}</version>
     </dependency>
-		
+    
     <dependency>
       <groupId>com.google.http-client</groupId>
       <artifactId>google-http-client-jackson2</artifactId>
-      <version>${project.http.version}</version>
+      <version>${com.google.api-client.version}</version>
       <exclusions>
       	<exclusion>
       		<groupId>xpp3</groupId>
